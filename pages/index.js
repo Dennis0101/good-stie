@@ -1,7 +1,7 @@
 // pages/index.js
-import Sidebar from '@/components/Sidebar'
-import Header from '@/components/Header'
-import Card from '@/components/Card'
+import Sidebar from '/components/Sidebar'
+import Header from '/components/Header'
+import Card from '/components/Card'
 
 export default function Home() {
   return (
