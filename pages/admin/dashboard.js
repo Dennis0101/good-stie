@@ -1,5 +1,6 @@
 // pages/admin/dashboard.js
 import AdminLayout from '../../components/AdminLayout';
+import RealTimeChart from '../../components/RealTimeChart';
 
 const Dashboard = () => {
   return (
