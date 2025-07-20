@@ -1,40 +1,42 @@
 import Link from 'next/link'
 
-export default function LoginPage() {
+export default function Login() {
   return (
-    <div className="min-h-screen flex items-center justify-center bg-gradient-to-b from-[#0f0c29] via-[#302b63] to-[#24243e]">
-      <div className="bg-black/60 backdrop-blur p-8 rounded-lg max-w-md w-full text-white">
-        <h1 className="text-center text-3xl font-bold mb-6 text-pink-400">박찬벽</h1>
-        <h2 className="text-xl font-semibold mb-4 text-center">로그인</h2>
-
+    <div className="flex items-center justify-center min-h-screen bg-gradient-to-b from-black to-purple-900">
+      <div className="bg-glass backdrop-blur-md p-10 rounded-lg shadow-xl w-full max-w-md">
+        <h1 className="text-2xl font-bold text-center mb-6">로그인</h1>
         <form className="space-y-4">
           <input
             type="text"
             placeholder="아이디 (6자 이상)"
-            className="w-full px-4 py-2 rounded bg-gray-800 text-white focus:outline-none"
-            required
+            className="w-full px-4 py-2 rounded bg-gray-800 text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-primary"
           />
           <input
             type="password"
             placeholder="비밀번호 입력"
-            className="w-full px-4 py-2 rounded bg-gray-800 text-white focus:outline-none"
-            required
+            className="w-full px-4 py-2 rounded bg-gray-800 text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-primary"
           />
-
           <button
             type="submit"
-            className="w-full bg-pink-500 hover:bg-pink-600 transition py-2 rounded text-white font-semibold"
+            className="w-full py-2 mt-2 rounded bg-primary hover:bg-pink-600 text-white font-bold"
           >
             로그인
           </button>
-        </form>
 
-        <p className="mt-4 text-sm text-center">
-          아직 계정이 없으신가요?{' '}
-          <Link href="/register" className="text-pink-400 underline">
+          <Link
+            href="/register"
+            className="block text-center mt-2 text-sm text-gray-400 hover:text-primary"
+          >
             회원가입
           </Link>
-        </p>
+
+          <Link
+            href="/admin/dashboard"
+            className="block text-center mt-4 text-sm text-gray-300 hover:text-primary underline"
+          >
+            메인으로 이동
+          </Link>
+        </form>
       </div>
     </div>
   )
