@@ -1,51 +1,49 @@
 import Link from 'next/link'
 
-export default function RegisterPage() {
+export default function Register() {
   return (
-    <div className="min-h-screen flex items-center justify-center bg-gradient-to-b from-[#0f0c29] via-[#302b63] to-[#24243e]">
-      <div className="bg-black/60 backdrop-blur p-8 rounded-lg max-w-md w-full text-white">
-        <h1 className="text-center text-3xl font-bold mb-6 text-pink-400">박찬벽</h1>
-        <h2 className="text-xl font-semibold mb-4 text-center">회원가입</h2>
-
+    <div className="flex items-center justify-center min-h-screen bg-gradient-to-b from-black to-purple-900">
+      <div className="bg-glass backdrop-blur-md p-10 rounded-lg shadow-xl w-full max-w-md">
+        <h1 className="text-2xl font-bold text-center mb-6">회원가입</h1>
         <form className="space-y-4">
           <input
             type="text"
             placeholder="아이디 (6자 이상)"
-            className="w-full px-4 py-2 rounded bg-gray-800 text-white focus:outline-none"
-            required
+            className="w-full px-4 py-2 rounded bg-gray-800 text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-primary"
           />
           <input
             type="password"
             placeholder="비밀번호 (6자 이상)"
-            className="w-full px-4 py-2 rounded bg-gray-800 text-white focus:outline-none"
-            required
+            className="w-full px-4 py-2 rounded bg-gray-800 text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-primary"
           />
           <input
             type="password"
             placeholder="비밀번호 확인"
-            className="w-full px-4 py-2 rounded bg-gray-800 text-white focus:outline-none"
-            required
+            className="w-full px-4 py-2 rounded bg-gray-800 text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-primary"
           />
-
-          {/* 캡차 영역 - 실제로 연동하려면 라이브러리 설치 */}
-          <div className="bg-gray-900 p-4 rounded text-center">
-            <input type="checkbox" className="mr-2" required /> 사람입니다 (캡차)
-          </div>
+          <div className="text-sm text-gray-300 text-center">[인증] 사람입니다</div>
 
           <button
             type="submit"
-            className="w-full bg-pink-500 hover:bg-pink-600 transition py-2 rounded text-white font-semibold"
+            className="w-full py-2 mt-2 rounded bg-primary hover:bg-pink-600 text-white font-bold"
           >
             회원가입
           </button>
-        </form>
 
-        <p className="mt-4 text-sm text-center">
-          이미 계정이 있으신가요?{' '}
-          <Link href="/login" className="text-pink-400 underline">
+          <Link
+            href="/login"
+            className="block text-center mt-2 text-sm text-gray-400 hover:text-primary"
+          >
             로그인
           </Link>
-        </p>
+
+          <Link
+            href="/admin/dashboard"
+            className="block text-center mt-4 text-sm text-gray-300 hover:text-primary underline"
+          >
+            메인으로 이동
+          </Link>
+        </form>
       </div>
     </div>
   )
