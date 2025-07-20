@@ -1,8 +1,9 @@
-/* styles/globals.css */
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
-html, body {
-  @apply bg-zinc-900 text-white;
+body {
+  background-color: #111827; /* 기본 배경 */
+  color: #fff;
+  font-family: 'Noto Sans KR', sans-serif;
 }
