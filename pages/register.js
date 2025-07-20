@@ -4,7 +4,7 @@ export default function RegisterPage() {
   return (
     <div className="min-h-screen flex items-center justify-center bg-gradient-to-b from-[#0f0c29] via-[#302b63] to-[#24243e]">
       <div className="bg-black/60 backdrop-blur p-8 rounded-lg max-w-md w-full text-white">
-        <h1 className="text-center text-3xl font-bold mb-6 text-pink-400">HACKVELY</h1>
+        <h1 className="text-center text-3xl font-bold mb-6 text-pink-400">박찬벽</h1>
         <h2 className="text-xl font-semibold mb-4 text-center">회원가입</h2>
 
         <form className="space-y-4">
